@@ -1175,6 +1175,7 @@ void returnVehicle() {
     while (fscanf(rentFile, "%d %d %d [%[^]]] %d %d [%[^]]] [%[^]]]", &r.rentID, &r.vehicleID, &r.customerID, r.custname, &r.days, &r.totalRent, r.rentDate, r.returnDate) != EOF) {
         cleanDateString(r.rentDate);
         cleanDateString(r.returnDate);
+        
         if (r.vehicleID == id && strcmp(r.returnDate, "N/A") == 0) {
             printf("How many days did you use the vehicle? ");
             scanf("%d", &r.days);
@@ -1188,7 +1189,25 @@ void returnVehicle() {
             printf("\a");
             printf("\n%sBill Generated Successfully!%s\n", GREEN, RESET);
         }
-        fprintf(rentTemp, "%-5d %-5d %-5d [%-20s] %-4d %-10d [%-20s] [%-20s]\n", r.rentID, r.vehicleID, r.customerID, r.custname, r.days, r.totalRent, r.rentDate, r.returnDate);
+        
+        // padded date strings for writing
+        char rentDateBuffer[30], returnDateBuffer[30];
+        
+        if (strcmp(r.rentDate, "N/A") == 0 || strlen(r.rentDate) == 0) {
+            sprintf(rentDateBuffer, "N/A_________________");
+        } else {
+            strcpy(rentDateBuffer, r.rentDate);
+        }
+        
+        if (strcmp(r.returnDate, "N/A") == 0 || strlen(r.returnDate) == 0) {
+            sprintf(returnDateBuffer, "N/A_________________");
+        } else {
+            strcpy(returnDateBuffer, r.returnDate);
+        }
+        
+        fprintf(rentTemp, "%-5d %-5d %-5d [%-20s] %-4d %-10d [%-20s] [%-20s]\n", 
+                r.rentID, r.vehicleID, r.customerID, r.custname, 
+                r.days, r.totalRent, rentDateBuffer, returnDateBuffer);
     }
 
     fclose(rentFile);
@@ -1220,11 +1239,27 @@ void returnVehicle() {
         while (fscanf(custmFile, "%d [%[^]]] %s %s [%[^]]] [%[^]]]", &c.id, c.name, c.cnic, c.phone, c.rentdate, c.returndate) != EOF) {
             cleanDateString(c.rentdate);
             cleanDateString(c.returndate);
+            
             if (c.id == customerIDForUpdate && strcmp(c.returndate, "N/A") == 0) {
                 strcpy(c.returndate, returnDateTime);
             }
 
-            fprintf(custmTemp, "%-5d [%-20s] %-15s %-15s [%-20s] [%-20s]\n", c.id, c.name, c.cnic, c.phone, c.rentdate, c.returndate);
+            // Prepare padded date strings for writing
+            char rentDateBuffer[30], returnDateBuffer[30];
+            
+            if (strcmp(c.rentdate, "N/A") == 0 || strlen(c.rentdate) == 0) {
+                sprintf(rentDateBuffer, "N/A_________________");
+            } else {
+                strcpy(rentDateBuffer, c.rentdate);
+            }
+            
+            if (strcmp(c.returndate, "N/A") == 0 || strlen(c.returndate) == 0) {
+                sprintf(returnDateBuffer, "N/A_________________");
+            } else {
+                strcpy(returnDateBuffer, c.returndate);
+            }
+            
+            fprintf(custmTemp, "%-5d [%-20s] %-15s %-15s [%-20s] [%-20s]\n", c.id, c.name, c.cnic, c.phone, rentDateBuffer, returnDateBuffer);
         }
         
         fclose(custmFile);
