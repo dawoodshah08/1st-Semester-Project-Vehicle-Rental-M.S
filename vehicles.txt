@@ -1,0 +1,23 @@
+999   [2015] [Honda Civic         ] [white          ] 6000       1
+444   [1990] [Toyota Camry        ] [red            ] 3000       1
+333   [2017] [Land Cruiser        ] [Torqouise      ] 16000      1
+222   [2025] [FJ Cruiser          ] [Blue           ] 20000      1
+111   [2018] [Honda City          ] [Black          ] 4500       1
+555   [2020] [Kia Sportage        ] [Grey           ] 9000       1
+777   [2019] [Suzuki Swift        ] [Silver         ] 3500       1
+888   [2021] [Toyota Fortuner     ] [White          ] 15000      1
+666   [2016] [Corolla GLi         ] [Red            ] 5000       1
+123   [2022] [Hyundai Tucson      ] [Blue           ] 12000      0
+321   [2014] [Audi A4             ] [White          ] 14000      0
+654   [2013] [BMW X5              ] [Black          ] 18000      1
+876   [2011] [Mercedes C200       ] [Silver         ] 16000      1
+432   [2020] [MG HS               ] [Maroon         ] 11000      1
+210   [2018] [Honda BRV           ] [Grey           ] 7000       1
+909   [2012] [Suzuki Mehran       ] [White          ] 1500       1
+707   [2015] [Toyota Prius        ] [Green          ] 8000       1
+808   [2023] [Tesla Model 3       ] [Blue           ] 22000      1
+505   [2008] [Toyota Vitz         ] [Pink           ] 2500       1
+242   [2024] [Porsche             ] [Red            ] 60000      1
+2653  [2026] [Toyota Fortuner     ] [Black          ] 100000     1
+83726 [2000] [Tesla               ] [white          ] 5000       1
+656   [2024] [Porsche Cayman      ] [Yellow         ] 35000      1
