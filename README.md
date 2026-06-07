@@ -38,6 +38,14 @@ A console-based Vehicle Rental Management System developed in C that enables adm
 * customers.txt
 * rentals.txt
 
+Note: These text files are used for data storage. The repository includes sample/initial data files for demonstration purposes.
+
+## How to Run
+Clone the repository.
+Compile the source code using a C compiler (GCC or any compatible compiler).
+Run the executable.
+The required text files will be used to store and retrieve vehicle, customer, and rental information.
+
 ## Learning Outcomes
 This project demonstrates:
 * Data structures in C
