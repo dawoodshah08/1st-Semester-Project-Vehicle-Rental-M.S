@@ -43,7 +43,7 @@ Note: These text files are used for data storage. The repository includes sample
 ## How to Run
 Clone the repository.
 Compile the source code using a C compiler (GCC or any compatible compiler).
-Run the executable.
+Run the executable. If building from scratch, first run the add vehicles function to create vehicles file.
 The required text files will be used to store and retrieve vehicle, customer, and rental information.
 
 ## Learning Outcomes
